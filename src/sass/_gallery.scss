@@ -1,0 +1,105 @@
+.section-gallery {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-image: linear-gradient(
+    to bottom,
+    var(--light-coloured-backgroud) 31%,
+    var(--text-color-dark-backgroud) 31%
+  );
+  @include tablet {
+    background-image: linear-gradient(
+      to bottom,
+      var(--light-coloured-backgroud) 28%,
+      var(--text-color-dark-backgroud) 28%
+    );
+  }
+}
+
+.gallery {
+  height: 185px;
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+
+  @include mobile {
+    height: 255px;
+    gap: 4px;
+  }
+  @include tablet {
+    height: 375px;
+    gap: 6px;
+  }
+  @include desktop {
+    height: 570px;
+    gap: 8px;
+  }
+}
+
+.gallery__container--mt {
+  margin-top: 10px;
+  @include mobile {
+    margin-top: 20px;
+  }
+  @include tablet {
+    margin-top: 35px;
+  }
+  @include desktop {
+    margin-top: 50px;
+  }
+}
+
+.gallery__pict {
+  display: block;
+  height: auto;
+  width: 40px;
+
+  overflow-y: hidden;
+  border-radius: 15%;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.12), 2px 2px 1px rgba(0, 0, 0, 0.14),
+    2px 3px 2px rgba(0, 0, 0, 0.2);
+
+  transition-property: width, box-shadow;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include mobile {
+    width: 60px;
+  }
+  @include tablet {
+    width: 100px;
+  }
+  @include desktop {
+    width: 150px;
+  }
+}
+
+.gallery__pict:not(:first-child) {
+  margin-top: 3px;
+
+  @include mobile {
+    margin-top: 4px;
+  }
+  @include tablet {
+    margin-top: 6px;
+  }
+  @include desktop {
+    margin-top: 8px;
+  }
+}
+
+picture.big {
+  width: 80px;
+  box-shadow: 2px 2px 3px rgba(212, 20, 67, 0.12),
+    2px 2px 1px rgba(212, 20, 67, 0.14), 2px 3px 2px rgba(212, 20, 67, 0.2);
+
+  @include mobile {
+    width: 120px;
+  }
+  @include tablet {
+    width: 205px;
+  }
+  @include desktop {
+    width: 300px;
+  }
+}
